@@ -14,7 +14,7 @@ EMAIL_PASSWORD = "hxth vign lgoo utiv"  # Replace with your Gmail app password
 RECIPIENTS = {
     "Osher": {
         "phone": "5088082203",
-        "carrier": "@vtext.com",  # Verizon
+        "carrier": "@vzwpix.com",  # Verizon
         "sender_name": "Toria"    # Who the message is from when Osher is recipient
     },
     "Toria": {
