@@ -30,9 +30,16 @@ st.title("Smoosh App")
 # Create a container for consistent width
 container = st.container()
 
-# Simple interface with just a dropdown and button
+# Interface with dropdown, custom message option, and button
 with container:
     recipient_name = st.selectbox("Choose smooshee:", options=list(RECIPIENTS.keys()))
+    
+    # Add option to use custom message
+    use_custom_message = st.checkbox("Use custom message")
+    
+    custom_message = ""
+    if use_custom_message:
+        custom_message = st.text_area("Enter your custom message:", "")
     
     # Add a small space for visual separation
     st.write("")
@@ -44,8 +51,14 @@ with container:
             recipient_email = recipient["phone"] + recipient["carrier"]
             sender_name = recipient["sender_name"]
             
-            # Create message with heart emoji and SMOOOOOSH
-            message = MIMEText(f"{sender_name} just sent you a smoosh! SMOOOOOSH")
+            # Use custom message if provided, otherwise use default
+            if use_custom_message and custom_message.strip():
+                message_text = custom_message
+            else:
+                message_text = f"{sender_name} just sent you a smoosh! SMOOOOOSH"
+            
+            # Create message
+            message = MIMEText(message_text)
             message['From'] = EMAIL_ADDRESS
             message['To'] = recipient_email
             message['Subject'] = ""  # Empty subject line
