@@ -19,7 +19,7 @@ RECIPIENTS = {
     },
     "Toria": {
         "phone": "8573377180",
-        "carrier": "@vtext.com",  # T-Mobile
+        "carrier": "@vzwpix.com",  # T-Mobile
         "sender_name": "Osher"      # Who the message is from when Toria is recipient
     }
 }
@@ -45,7 +45,7 @@ with container:
             sender_name = recipient["sender_name"]
             
             # Create message with heart emoji and SMOOOOOSH
-            message = MIMEText(f"{sender_name} just sent you a smoosh!")
+            message = MIMEText(f"{sender_name} just sent you a smoosh! SMOOOOOSH")
             message['From'] = EMAIL_ADDRESS
             message['To'] = recipient_email
             message['Subject'] = ""  # Empty subject line
