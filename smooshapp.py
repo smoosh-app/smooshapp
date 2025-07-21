@@ -19,7 +19,7 @@ RECIPIENTS = {
     },
     "Toria": {
         "phone": "8573377180",
-        "carrier": "@vtext.net",  # T-Mobile
+        "carrier": "@vtext.com",  # T-Mobile
         "sender_name": "Osher"      # Who the message is from when Toria is recipient
     }
 }
