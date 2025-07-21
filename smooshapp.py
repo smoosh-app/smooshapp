@@ -5,10 +5,10 @@ from email.mime.multipart import MIMEMultipart
 import os
 
 # Hardcoded configuration
-EMAIL_ADDRESS = "smooosh.app@gmail.com"
+EMAIL_ADDRESS = "oshersmusic@gmail.com"
 # For security, you should use Streamlit secrets for the password in production
 # This is just for demonstration purposes
-EMAIL_PASSWORD = "hxth vign lgoo utiv"  # Replace with your Gmail app password
+EMAIL_PASSWORD = "slua zzrs cgag yagl"  # Replace with your Gmail app password
 
 # Recipient details
 RECIPIENTS = {
